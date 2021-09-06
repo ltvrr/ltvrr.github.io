@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>LTVRR</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                Exploring Long Tail Visual Relationship Recognition <br> with Large Vocabulary</br> 
+                <small>
+                    ICCV 2021
+                </small>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=hBlcEY0AAAAJ">
+                          Sherif Abdelkarim*
+                        </a>
+                        </br>KAUST
+                    </li>
+                    <li>
+                        <a href="https://aniket-agarwal1999.github.io/">
+                            Aniket Agarwal*
+                        </a>
+                        </br>IIT Roorkee
+                    </li>
+                    <li>
+                        <a href="https://ai.stanford.edu/~optas/">
+                          Panos Achlioptas
+                        </a>
+                        </br>Stanford
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=9G2OQmkAAAAJ&hl=en">
+                          Jun Chen
+                        </a>
+                        </br>KAUST
+                    </li><br>
+                    <li>
+                        <a href="https://jiaji-huang.github.io/">
+                          Jiaji Huang
+                        </a>
+                        </br>Baidu
+                    </li>
+                    <li>
+                        <a href="http://www.boyangli.org/">
+                          Boyang Li
+                        </a>
+                        </br>NTU Singapore
+                    </li>
+                    <li>
+                        <a href="http://research.baidu.com/People/index-view?id=115">
+                          Kenneth Church
+                        </a>
+                        </br>Baidu
+                    </li>
+                    <li>
+                        <a href="http://www.mohamed-elhoseiny.com/">
+                          Mohamed Elhoseiny
+                        </a>
+                        </br>KAUST
+                    </li>
+                </ul>
+                <p> *Denotes Equal Contribution </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://arxiv.org/abs/2004.00436">
+                            <image src="img/ltvrr_paper.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/watch?v=ceEuCXr8Ow8">
+                            <image src="img/youtube_icon.png" height="60px">
+                                <h4><strong>Video</strong></h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Vision-CAIR/LTVRR">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code & Benchmarks</strong></h4>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="https://github.com/">
+                            <image src="img/github.png" height="60px">
+                                <h4><strong>Code</strong></h4>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Abstract
+                </h3>
+                <image src="img/ltvrr.png" class="img-responsive" alt="overview"><br>
+                <p class="text-justify">
+                    Several approaches have been proposed in recent literature to alleviate the long-tail problem, mainly in object classification tasks. 
+                    In this paper, we make the first large-scale study concerning the task of Long-Tail Visual Relationship Recognition (LTVRR). LTVRR aims 
+                    at improving the learning of structured visual relationships that come from the long-tail (e.g., “rabbit grazing on grass”). In this setup, 
+                    the subject, relation, and object classes each follow a long-tail distribution. To begin our study and make a future benchmark for the community, 
+                    we introduce two LTVRR-related benchmarks, dubbed VG8K-LT and GQA-LT, built upon the widely used Visual  Genome and GQA datasets. We use 
+                    these benchmarks to study the performance of several state-of-the-art long-tail models on the LTVRR setup. Lastly, we propose a 
+                    visiolinguistic hubless (VilHub) loss and a Mixup augmentation technique adapted to LTVRR setup, dubbed as RelMix. Both VilHub and 
+                    RelMix can be easily integrated on top of existing models and despite being simple, our results show that they can remarkably improve 
+                    the performance, especially on tail classes.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe src="https://www.youtube.com/embed/ceEuCXr8Ow8" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    A New Long-Tail Benchmark
+                </h3>
+                <p class="text-justify">
+                    To study the problem of Long-tail Recognition in VRD (Visual Relation Detection) setup, we propose two new benchmarks, namely GQA-LT and VG8K-LT, based on top of already existing GQA and VG datasets.
+                    Most long-tail literature focuses on the range of class frequency that is on a smaller scale than in our setup. For our benchmarks, we use following frequencies:For GQA-LT ( 1,703 object classes and 310
+                    relation classes), the most frequent object and relationship categories have 374,282 and 1,692,068 examples, and the least frequent have 1 and 2 examples, respectively. This results in factors of around 
+                    300,000+ for objects and around 1.7 million for relations between the most frequent and least frequent classes. For VG8K-LT (5,330 objects classes and 2000 relation classes), the most frequent object and 
+                    relationship categories have 196,944 and 618,687 examples, and the least frequent have 14 and 18 examples, respectively, which leads to factors of approximately 14,000 for objects and 34,000 for relations.
+                    For more info regarding the same you can refer to the paper and supplementary.
+                </p>
+                <p style="text-align:center;">
+                    <image src="img/historgrams.png" height="50px" class="img-responsive">
+                </p>
+                <p class="text-justify">
+                    The histograms showing the sbj, rel, obj frequencies for the GQA-LT and VG8K-LT dataset. The figures shows the frequency values in log scale.
+                </p>
+
+                <h4>
+                    GQA-LT
+                </h4>
+                <!-- <p style="text-align:center;">
+                    <image src="img/ipe_eqn_under_pad.png" height="30px" class="img-responsive">
+                </p> -->
+                <p class="text-justify">
+                    You can download the annotations and splits necessary for the GQA-LT benchmark <a href="https://drive.google.com/file/d/1ypmMOq2TkZyLNVuU9agHS7_QcsfTtBmn/view?usp=sharing">here</a>.
+                    You should see a 'gvqa' folder once unzipped. It contains seed folder called 'seed0' that contains .json annotations suited for the dataloader used in our implementations. Also, download GQA images from <a href="https://cs.stanford.edu/people/dorarad/gqa/download.html">here</a>
+                </p>
+
+                <h4>
+                    VG8K-LT
+                </h4>
+                <!-- <p style="text-align:center;">
+                    <image src="img/ipe_eqn_under_pad.png" height="30px" class="img-responsive">
+                </p> -->
+                <p class="text-justify">
+                    You can download the annotations and splits necessary for the VG8K-LT benchmark <a href="https://drive.google.com/file/d/1S8WNnK0zt8SDAGntkCiRDfJ8rZOR3Pgx/view?usp=sharing">here</a>.
+                    You should see a 'vg8k' folder once unzipped. It contains seed folder called 'seed3' that contains .json annotations suited for the dataloader used in our implementations. Also, download VG images from <a href="https://visualgenome.org/api/v0/api_home.html">here</a>
+                </p>
+            </div>
+        </div>
+            
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    VilHub & RelMix
+                </h3>
+                <p class="text-justify">
+                    To improve upon the classification accuracy on the long-tail spectrum of relationships and objects, we also propose two novel techniques, namely VilHub and RelMix.
+                    The main idea behind both of them being able to be used on top of <i>any</i> VRD models so far and improve its overall accuracy, especially on tail classes.
+                </p>
+                <p style="text-align:center;">
+                    <image src="img/ltvrr_approach.png" class="img-responsive" alt="scales">
+                </p>
+                <p class="text-justify">
+                    The overall approach and pipeline used for our baseline models.
+                    <br>
+                    <br>    
+                </p>
+                <p class="text-justify">
+                    VilHub loss takes its inspiration from the problem of hubness, often talked in NLP problems. This is usually caused when some frequent words, called hubs, gets indistinguishably
+                    close to many other less represented words. In long-tail VRR context, these hubs are the head classes, which are often over-predicted at the expense of tail classes. 
+                    To alleviate the hubness phenomenon, we develop a vision & language hublessloss (dubbed VilHub).
+                </p>
+                <p class="text-justify">
+                    RelMix is an augmentation technique, inspired from <a href="https://arxiv.org/abs/1710.09412">Mixup</a> and helps alleviate the problem of long-tail by augmenting more tail features
+                    in the training set. This is done in a mixup fashion, where triplets are selected belonging to different spectrum of data (i.e., head, med, tail) are combined in a systematic fashion
+                    to allow the augmented data having much more of tail features. This in turn helps for long-tail classification and for our overall problem.
+                </p>
+                <p class="text-justify">
+                    Some of the qualitative results using our technique can be viewed below (click on the image to better view). For more qualitative as well quantitative results, please refer to the main paper and supplementary.
+                </p>
+                <p style="text-align:center;">
+                    <a href="img/qualitative_result.jpg"><image src="img/qualitative_result.jpg" class="img-responsive" alt="scales" class="hoverZoomLink"></a>
+                </p>
+            </div>
+        </div>
+        
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{abdelkarim2020long,
+    title={Long tail visual relationship recognition with hubless regularized relmix},
+    author={Abdelkarim, Sherif and Agarwal, Aniket and Achlioptas, Panos and Chen, Jun and Huang, Jiaji and Li, Boyang and Church, Kenneth and Elhoseiny, Mohamed},
+    journal={arXiv preprint arXiv:2004.00436},
+    year={2020}
+    }
+}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
