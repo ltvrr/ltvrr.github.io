@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>LTVRR Challenge</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                Long Tail Visual Relationship Recognition Challenge</br> 
+                <small>
+                    ICCV 2021
+                </small>
+            </h2>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                    <li>
+                        <a href="./details.html">
+                          Challenge Details
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./starter.html">
+                          Download Dataset & Starter Code
+                        </a>
+                    </li>
+                </ul>   
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h4>
+                        <b>Submission Servers are open!</b>
+                    </h4>
+                    <image src="img/examples.png" class="img-responsive" alt="overview"></image>
+                </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    About
+                </h3>
+                <p class="text-justify">
+                    The challenge is part of <a href="https://sites.google.com/view/iccv21clvl/home?authuser=0">4th Workshop on Closing the Loop between Vision and Language</a>, held at ICCV 2021.
+                    The main goal of the challenge is to evaluate and benchmark new and better methods for GQA-LT and VG8K-LT benchmarks proposed in <a href="https://ltvrr.github.io/">Exploring Long Tail Visual Relationship Recognition with Large Vocabulary</a>.
+                    This is a new baseline proposed on top of VG and GQA datasets, but specifically focussed on long-tail recognition. For GQA-LT ( 1,703 object classes and 310 relation classes), the most frequent object and 
+                    relationship categories have 374,282 and 1,692,068 examples, and the least frequent have 1 and 2 examples, respectively. This results in factors of around 300,000+ for objects and around 1.7 million 
+                    for relations between the most frequent and least frequent classes. For VG8K-LT (5,330 objects classes and 2000 relation classes), the most frequent object and relationship categories have 196,944 and 618,687 examples, 
+                    and the least frequent have 14 and 18 examples, respectively, which leads to factors of approximately 14,000 for objects and 34,000 for relations.
+                </p>
+                <hr>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Task
+                </h3>
+                <p class="text-justify">
+                    The main task for both of these benchmarks is to predict relationship and at the same time subject/object associated with the triplet. During training and evaluation,
+                    the ground-truth bounding boxes are already provided and hence the main aim is for the classification of sbj/obj and the rel associated with them.
+                    Further details about the metrics used for evaluation and also the submission site for both the benchmarks can be found <a href="https://ltvrr.github.io/">here</a>.
+                    Also download the train/val datasets from <a href="https://ltvrr.github.io/">here</a>, along with the starter code.
+                </p>
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Important Dates
+                </h3>
+                <p class="text-justify">
+                    <ul>
+                        <li>
+                            <b>10th September, 2021:</b> The challenge portal for submissions for both benchmarks (GQA-LT & VG8K-LT) open up.
+                        </li>
+                        <li>
+                            <b>8th October, 2021:</b> The challenge deadline for both the benchmarks.
+                        </li>
+                    </ul>
+                    Workshop: Monday, Oct 17 (full day)
+                </p>
+                <hr>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Contact
+                </h3>
+                <p class="text-justify">
+                    <ul>
+                        <li>
+                            <a href="mailto:aagarwal@ma.iitr.ac.in">aagarwal@ma.iitr.ac.in</a>
+                        </li>
+                        <li>
+                            <a href="mailto:sherif.abdelkarim91@gmail.com">sherif.abdelkarim91@gmail.com</a>
+                        </li>
+                    </ul>
+                </p>
+                <hr>
+            </div>
+        </div>
+            
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Organizers
+                </h3>
+                <p class="text-justify">
+                    <ul>
+                        <li>
+                            Aniket Agarwal, undergraduate at IIT Roorkee
+                        </li>
+                        <li>
+                            Sherif Abdelkarim, PhD candidate at UC Irvine
+                        </li>
+                        <li>
+                            Mohamed Elhoseiny, Assistant Professor at KAUST
+                        </li>
+                    </ul>
+                </p>
+                <hr>
+            </div>
+        </div>
+        
+            
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@article{abdelkarim2020long,
+    title={Long tail visual relationship recognition with hubless regularized relmix},
+    author={Abdelkarim, Sherif and Agarwal, Aniket and Achlioptas, Panos and Chen, Jun and Huang, Jiaji and Li, Boyang and Church, Kenneth and Elhoseiny, Mohamed},
+    journal={arXiv preprint arXiv:2004.00436},
+    year={2020}
+    }
+}</textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p>
+                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a>.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
