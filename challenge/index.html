@@ -101,42 +101,36 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Task & Metrics Used
+                    Task & Metrics
                 </h3>
                 <p class="text-justify">
                     The main task for both of these benchmarks is to predict relationship and at the same time subject/object associated with the triplet. During training and evaluation,
                     the ground-truth bounding boxes are already provided and hence the main aim is the classification of sbj/obj and the rel associated with them.
                     The main metric used for the challenge is <i>average per-class accuracy</i>, which is the accuracy of each class calculated separately, then average.
                     The average per-class accuracy is a commonly used metric in the long-tail literature. Further details about the metrics on the leaderboard is give below:
-
-                    <!-- <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <h3 id="metrics">
-                                Metrics
-                            </h3> -->
-                            <p class="text-justify">
-                                <ul>
-                                    <li>
-                                        <b>rel_all_per_class:</b> The per-class relationship classification performance averaged across all classes.
-                                    </li>
-                                    <li>
-                                        <b>sbj_obj_all_per_class:</b> The per-class subject/object classification performance averaged across all classes.
-                                    </li>
-                                    <li>
-                                        <b>trip_sro_scores_all:</b> The triplet classification performance averaged across all possible triplet types
-                                    </li>
-                                    <li>
-                                        <b>trip_or_scores_all:</b> The triplet classification performance averaged across all possible object-relation combination types.
-                                    </li>
-                                    <li>
-                                        <b>trip_sr_scores_all:</b> The triplet classification performance averaged across all possible subject-relation combination types.
-                                    </li>
-                                    <li>
-                                        <b>trip_so_scores_all:</b>  The triplet classification performance averaged across all possible subject-object combination types.
-                                    </li>
-                                </ul>
-                            </p>
-                            <hr>
+                    
+                    <ul>
+                        <li>
+                            <b>rel_all_per_class:</b> The per-class relationship classification performance averaged across all classes.
+                        </li>
+                        <li>
+                            <b>sbj_obj_all_per_class:</b> The per-class subject/object classification performance averaged across all classes.
+                        </li>
+                        <li>
+                            <b>trip_sro_scores_all:</b> The triplet classification performance averaged across all possible triplet types
+                        </li>
+                        <li>
+                            <b>trip_or_scores_all:</b> The triplet classification performance averaged across all possible object-relation combination types.
+                        </li>
+                        <li>
+                            <b>trip_sr_scores_all:</b> The triplet classification performance averaged across all possible subject-relation combination types.
+                        </li>
+                        <li>
+                            <b>trip_so_scores_all:</b>  The triplet classification performance averaged across all possible subject-object combination types.
+                        </li>
+                    </ul>
+                </p>
+                <hr>
             </div>
         </div>
                     <!-- We report the results on the subject, object, and relation separately of an (S,R,O) triplet on GQA-LT and VG8K-LT datasets. We evaluate
@@ -152,6 +146,7 @@
                     <figcaption>Table 2 - VG8K-LT splits</figcaption>
                 </center>
                 <br>
+                
                 <p class="text-justify">
                     Hence the metrics <i>rel_many, rel_med, rel_few, rel_all_per_class</i> are calculated by taking into account Table 1 & 2 for relations, and <i>sbj_obj_many, sbj_obj_med, sbj_obj_few, sbj_obj_all_per_class</i>
                     are calculated by taking into account Table 1 & 2 for sbj/obj. The other two metrics <i>rel_all_per_example</i> and <i>sbj_obj_all_per_example</i> are the standard metrics 
