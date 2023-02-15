@@ -41,7 +41,7 @@
             <h2 class="col-md-12 text-center">
                 Long Tail Visual Relationship Recognition Challenge</br> 
                 <small>
-                    Co-organized with the <a href="https://sites.google.com/view/l3d-ivu-2023/overview"></a>L3D-IVU Workshop</a> CVPR 2023
+                    Co-organized with the <a href="https://sites.google.com/view/l3d-ivu-2023/overview">L3D-IVU Workshop</a> CVPR 2023
                 </small>
             </h2>
         </div>
@@ -87,8 +87,8 @@
                 </h3>
                 <p class="text-justify">
                     <!-- The challenge is part of Workshop on Learning with Limited Labelled Data for Image and Video Understanding, held at CVPR 2022. -->
-                    The main goal of the challenge is to evaluate and benchmark new and better methods for GQA-LT and VG8K-LT benchmarks proposed in <a href="https://ltvrr.github.io/">Exploring Long Tail Visual Relationship Recognition with Large Vocabulary</a>.
-                    The main task for the challenge is Visual Relationship Recognition. Both the benchmarks, GQA-LT and VG8K-LT, are long-tailed created out of GQA and VG datasets.
+                    The main goal of this challenge is to evaluate and benchmark new and better methods for GQA-LT and VG8K-LT benchmarks proposed in <a href="https://ltvrr.github.io/">Exploring Long Tail Visual Relationship Recognition with Large Vocabulary</a>.
+                    One high level motivation is to allow researchers to develop methods for long-tail visual relationship recognition - a very important problem for fine-grained image understanding. Both the benchmarks, GQA-LT and VG8K-LT, are long-tailed created out of GQA and VG datasets.
                     With the presence of bounding boxes during both training and test time, the participants are required to submit a csv file containing the detection results of subject/object 
                     and the relation classes in the corresponding triplet.
                 </p>
@@ -105,10 +105,41 @@
                 </h3>
                 <p class="text-justify">
                     The main task for both of these benchmarks is to predict relationship and at the same time subject/object associated with the triplet. During training and evaluation,
-                    the ground-truth bounding boxes are already provided and hence the main aim is for the classification of sbj/obj and the rel associated with them.
+                    the ground-truth bounding boxes are already provided and hence the main aim is the classification of sbj/obj and the rel associated with them.
                     The main metric used for the challenge is <i>average per-class accuracy</i>, which is the accuracy of each class calculated separately, then average.
-                    The average per-class accuracy is a commonly used metric in the long-tail literature.
-                    We report the results on the subject, object, and relation separately of an (S,R,O) triplet on GQA-LT and VG8K-LT datasets. We evaluate
+                    The average per-class accuracy is a commonly used metric in the long-tail literature. Further details about the metrics on the leaderboard is give below:
+
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <h3 id="metrics">
+                                Metrics
+                            </h3>
+                            <p class="text-justify">
+                                <ul>
+                                    <li>
+                                        <b>rel_all_per_class:</b> The per-class relationship classification performance averaged across all classes.
+                                    </li>
+                                    <li>
+                                        <b>sbj_obj_all_per_class:</b> The per-class subject/object classification performance averaged across all classes.
+                                    </li>
+                                    <li>
+                                        <b>trip_sro_scores_all:</b> The triplet classification performance averaged across all possible triplet types
+                                    </li>
+                                    <li>
+                                        <b>trip_or_scores_all:</b> The triplet classification performance averaged across all possible object-relation combination types.
+                                    </li>
+                                    <li>
+                                        <b>trip_sr_scores_all:</b> The triplet classification performance averaged across all possible subject-relation combination types.
+                                    </li>
+                                    <li>
+                                        <b>trip_so_scores_all:</b>  The triplet classification performance averaged across all possible subject-object combination types.
+                                    </li>
+                                </ul>
+                            </p>
+                            <hr>
+                        </div>
+                    </div>
+                    <!-- We report the results on the subject, object, and relation separately of an (S,R,O) triplet on GQA-LT and VG8K-LT datasets. We evaluate
                     the models using the average per-class accuracy across several frequency bands chosen based on frequency percentiles for GQA-LT and VG8K-LT, which can be seen below:
                 </p>
                 <center>
@@ -128,7 +159,7 @@
                 </p>
                 <hr>
             </div>
-        </div>
+        </div> -->
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -162,36 +193,7 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3 id="metrics">
-                    Metrics
-                </h3>
-                <p class="text-justify">
-                    <ul>
-                        <li>
-                            <b>rel_all_per_class:</b> The per-class relationship classification performance averaged across all classes.
-                        </li>
-                        <li>
-                            <b>sbj_obj_all_per_class:</b> The per-class subject/object classification performance averaged across all classes.
-                        </li>
-                        <li>
-                            <b>trip_sro_scores_all:</b> The triplet classification performance averaged across all possible triplet types
-                        </li>
-                        <li>
-                            <b>trip_or_scores_all:</b> The triplet classification performance averaged across all possible object-relation combination types.
-                        </li>
-                        <li>
-                            <b>trip_sr_scores_all:</b> The triplet classification performance averaged across all possible subject-relation combination types.
-                        </li>
-                        <li>
-                            <b>trip_so_scores_all:</b>  The triplet classification performance averaged across all possible subject-object combination types.
-                        </li>
-                    </ul>
-                </p>
-                <hr>
-            </div>
-        </div>
+        
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
